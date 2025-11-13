@@ -1,0 +1,98 @@
+/* ===== ROOT PALETTE ===== */
+:root {
+    --blue-900: #001f3f;
+    --blue-700: #0056b3;
+    --blue-500: #007bff;
+    --blue-300: #66b2ff;
+    --blue-100: #e6f2ff;
+    --radius: .65rem;
+    --shadow: 0 4px 14px rgba(0, 0, 0, .15);
+}
+
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--blue-100) 0%, #fff 100%);
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--blue-900);
+    min-height: 100vh;
+}
+
+/* ===== TYPO ===== */
+h1 {
+    font-size: 1.5rem !important;
+    /* override inline 24px */
+    margin-bottom: 1rem;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-500);
+    padding-left: .75rem;
+}
+
+/* ===== FORM WRAPPER ===== */
+div {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    max-width: 480px;
+}
+
+/* ===== CHECKBOX & RADIO ===== */
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: var(--blue-500);
+    /* modern browser */
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-right: .5rem;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+input[type="checkbox"]:hover,
+input[type="radio"]:hover {
+    transform: scale(1.15);
+}
+
+label {
+    /* fallback agar teks bisa diklik */
+    cursor: pointer;
+    user-select: none;
+}
+
+/* ===== BUTTON ===== */
+button {
+    margin-top: 1rem;
+    padding: .55rem 1.8rem;
+    border: none;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, var(--blue-700), var(--blue-500));
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, var(--blue-500), var(--blue-300));
+    box-shadow: 0 0 12px rgba(102, 178, 255, .6);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:576px) {
+    body {
+        padding: 1rem;
+    }
+
+    div {
+        padding: 1.25rem;
+    }
+}
